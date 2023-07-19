@@ -2,8 +2,8 @@ import { StatusBar } from 'expo-status-bar';
 import { Dimensions, FlatList, StyleSheet, Text, View } from 'react-native';
 import Header from './components/Layout/Header';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
-import Ionicons from '@expo/vector-icons/Ionicons';
 import FoodCard from './components/Cards/FoodCard';
+import HomeSectionOne from './components/section/HomeSectionOne';
 
 import Animated, {
   useSharedValue,
@@ -22,41 +22,6 @@ const SafeArea = ({ children }) => {
         {children}
       </SafeAreaView>
     </SafeAreaProvider>
-  );
-};
-
-const HomeSectionOne = () => {
-  return (
-    <View
-      style={{
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-between',
-        paddingHorizontal: 5,
-      }}
-    >
-      <View>
-        <Text
-          style={{
-            fontSize: 32,
-            letterSpacing: 15,
-            fontWeight: '500',
-          }}
-        >
-          FEAT .
-        </Text>
-        <Text
-          style={{
-            fontSize: 32,
-            letterSpacing: 15,
-            fontWeight: '500',
-          }}
-        >
-          . URED
-        </Text>
-      </View>
-      <Ionicons name="document" size={28} color={'black'} />
-    </View>
   );
 };
 
